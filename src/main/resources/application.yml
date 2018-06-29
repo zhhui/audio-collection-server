@@ -1,0 +1,10 @@
+server:
+  port: 8083
+  context-path: /
+
+# logging
+logging:
+  config: classpath:logback-spring.xml
+
+mybatis:
+  mapperLocations: classpath*:mapper/**/*Mapper.xml

@@ -1,0 +1,10 @@
+${AnsiColor.BLUE}
+  ____ ___                 .__
+ |    |   \           _____|  |__   ______  _  __
+ |    |   /  ______  /  ___/  |  \ /  _ \ \/ \/ /
+ |    |  /  /_____/  \___ \|   Y  (  <_> )     /
+ |______/           /____  >___|  /\____/ \/\_/
+                         \/     \/
+${AnsiColor.YELLOW}Spring version: ${spring-boot.formatted-version}
+${AnsiColor.BRIGHT_RED}Application title: ${application.title} ${application.formatted-version}
+
