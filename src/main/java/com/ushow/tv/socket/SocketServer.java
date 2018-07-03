@@ -1,5 +1,6 @@
 package com.ushow.tv.socket;
 
+import com.ushow.tv.controller.common.Consts;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -26,11 +27,9 @@ public class SocketServer {
   public void startSocketServer(int port) throws Exception {
 
     long start = System.currentTimeMillis();
-    String mainAudioFilePath = System.getProperty("user.dir") + "/mainSourceFileDir/";
-    String mainAudioFile = createORclearFileIfExists(mainAudioFilePath, "main.raw");
-
+    String mainAudioFile = createORclearFileIfExists(Consts.mainAudioFilePath, "main.raw");
     // 创建UDP套接字
-    DatagramSocket serverSocket = null;
+    DatagramSocket serverSocket;
     try {
       serverSocket = new DatagramSocket(port);
     } catch (SocketException e) {

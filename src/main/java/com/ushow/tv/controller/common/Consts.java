@@ -39,4 +39,6 @@ public class Consts {
   public static final int COMPARE_AUDIO_DURTIME = 5;// 单位秒 比较音频时间
   public static final int STEP = 16; // 单位 bit 位
 
+  public static final String mainAudioFilePath =  "/data/audio-collection/mainSourceFileDir/";
+
 }
