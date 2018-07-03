@@ -25,6 +25,7 @@ public class SocketServer {
    */
   public void startSocketServer(int port) throws Exception {
 
+    long start = System.currentTimeMillis();
     String mainAudioFilePath = System.getProperty("user.dir") + "/mainSourceFileDir/";
     String mainAudioFile = createORclearFileIfExists(mainAudioFilePath, "main.raw");
 
@@ -49,6 +50,7 @@ public class SocketServer {
       log.error("create main audio file error. error message : {}", e.getMessage());
       throw e;
     }
+    log.info("begin record main audio At ... ");
     try {
       while (status == true) {
         serverSocket.receive(receivePacket);
